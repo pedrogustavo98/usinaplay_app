@@ -1,0 +1,151 @@
+ion-toolbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    --background: #202020;
+
+
+    ion-title{
+        color: #FFF;
+    }
+
+
+    .btn-notificacao {
+        background-color: #000;
+        border-radius: 50%;
+        margin-right: 5%;
+        height: 5%;
+        box-shadow: 0px 2px 5px 0px;
+    }
+
+    .icone-app {
+        width: 100px;
+        height: 65px;
+        margin: auto;
+        display: flex;
+        justify-self: center;
+    }
+
+    .container-header {
+        --background: #202020;
+    }
+
+    ion-menu-button {
+        --color: #FFF !important;
+        margin-left: 20%;
+    }
+
+    .icon-notification {
+        height: 18px;
+        width: 18px;
+        margin: 10px;
+    }
+
+    .badge {
+        border-radius: 50px;
+        background-color: aqua;
+        width: 14px;
+        height: 15px;
+        margin-left: -14px;
+        display: flex;
+        margin-top: -37px;
+        box-shadow: 0px 0px 5px 0px rgba(0, 225, 255, 1);
+    }
+
+
+    .sem-notificacoes {
+        display: none;
+    }
+}
+
+.lista-menu-hamburguer {
+    --background: black;
+    --border-style: none;
+    margin-top: 20px;
+    color: #FFF;
+}
+
+
+:host {
+    --border-color: none !important;
+    height: 200vh !important;
+}
+
+.ion-page {
+    overflow-x: hidden;
+}
+
+ion-content {
+    --background: black;
+    font-family: system-ui;
+    font-weight: 700;
+    height: 200vh;
+
+
+    .container-infos {
+        display: flex;
+        width: 100%;
+        background: #202020;
+        height: 160px;
+        border-radius: 0px 0px 35px 35px;
+
+        .nome-usuario {
+            color: #FFF;
+        }
+
+        .nivel {
+            color: #6A36E8;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+
+
+        .container-image-user {
+            display: flex;
+            justify-content: center;
+
+            .imagem-usuario {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                border: 1px solid #202020;
+            }
+        }
+
+
+        .container-performance {
+            margin: auto;
+            padding: 10px;
+            border-radius: 20px;
+            width: 74%;
+            background-color: #161616;
+            margin-top: 10px;
+            justify-content: space-between;
+
+            .performance {
+                width: auto;
+                display: flex;
+
+                .img-geral {
+                    border-radius: 60px;
+                    background-color: #C26709;
+                    padding: 1px;
+                    margin: auto 5px auto auto;
+                    width: 22px;
+                    height: 22px;
+                }
+
+                .description {
+                    font-size: 10px;
+                    margin: auto 5px;
+                    color: #C26709;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,92 @@
+<!-- START PERSONAL ONLINE -->
+<div class="container-sessao">
+  <div class="container">
+    <div class="d-flex">
+      <h2 class="sessao">{{dados.modules.personal_online.modulo.label}}</h2>
+      <h2 class="sessao">
+        <img
+          *ngIf="dados.modules.personal_online.modulo.tipo == 'Mais' && dados.modules.personal_online.modulo.status == 'Disponível'"
+          src="/assets/icon_add.png" class="icon-add" alt="">
+
+        <div class="icon-novo" *ngIf="dados.modules.personal_online.modulo.tipo == 'Novo'">
+          NOVO
+        </div>
+      </h2>
+    </div>
+
+    <div class="container-carrosel">
+      <div class="container-image" *ngFor="let item of dados.modules.personal_online.dados; let i=index">
+        <img [src]="item.imagem" class="item-carrosel">
+
+        <div class="container-text">
+          <div class="overlay-text subtitle"> {{item.especialidade}} </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START PROGRAMAS -->
+<div class="container-sessao">
+  <div class="container">
+    <div class="d-flex">
+      <h2 class="sessao">{{dados.modules.programas.modulo.label}}</h2>
+      <h2 class="sessao">
+        <img
+          *ngIf="dados.modules.programas.modulo.tipo == 'Mais' && dados.modules.programas.modulo.status == 'Disponível'"
+          src="/assets/icon_add.png" class="icon-add" alt="">
+
+        <div class="icon-novo" *ngIf="dados.modules.programas.modulo.tipo == 'Novo'">
+          NOVO
+        </div>
+      </h2>
+    </div>
+
+    <div class="container-carrosel">
+      <div class="container-image" *ngFor="let item of dados.modules.programas.dados; let i=index">
+        <img [src]="item.imagem" class="item-carrosel">
+        <div class="container-text">
+          <div class="overlay-text title"> {{item.status == 'Fazendo' ? 'CONTINUAR TREINANDO' : ''}}
+          </div>
+          <div class="overlay-text subtitle"> {{item.nome}} </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START CONTEÚDOS -->
+<div class="container-sessao mb-5">
+  <div class="container container-end">
+    <div class="d-flex">
+      <h2 class="sessao">{{dados.modules.conteudos.modulo.label}}</h2>
+      <h2 class="sessao">
+        <img
+          *ngIf="dados.modules.conteudos.modulo.tipo == 'Mais' && dados.modules.conteudos.modulo.status == 'Disponível'"
+          src="/assets/icon_add.png" class="icon-add" alt="">
+
+        <div class="icon-novo" *ngIf="dados.modules.conteudos.modulo.tipo == 'Novo'">
+          NOVO
+        </div>
+      </h2>
+    </div>
+
+    <div class="container-carrosel">
+      <div class="container-image d-flex">
+        <div class="item-carrosel-vazio">
+          <div class="quadro-laranja-first">
+
+          </div>
+        </div>
+      </div>
+      <div class="container-image d-flex">
+        <div class="item-carrosel-vazio">
+          <div class="quadro-laranja-second">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

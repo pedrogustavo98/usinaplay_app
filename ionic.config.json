@@ -1,0 +1,7 @@
+{
+  "name": "usinaplay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

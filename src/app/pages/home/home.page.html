@@ -1,0 +1,74 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Olá, {{dados.usuario[0].nome}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+    <ion-item class="lista-menu-hamburguer">
+      <img slot="start" src="/assets/icon_home.png">
+      <ion-label (click)="navigateTo('Home')">Home</ion-label>
+    </ion-item>
+    <ion-item class="lista-menu-hamburguer">
+      <img slot="start" src="/assets/icon_treino.png">
+      <ion-label (click)="navigateTo('Treinos')">Treinos</ion-label>
+    </ion-item>
+    <ion-item class="lista-menu-hamburguer">
+      <img slot="start" src="/assets/icon_ajuda.png">
+      <ion-label (click)="navigateTo('Ajuda')">Ajuda</ion-label>
+    </ion-item>
+    <ion-item class="lista-menu-hamburguer">
+      <img slot="start" src="/assets/icon_sair.png">
+      <ion-label (click)="navigateTo('Sair')">Sair</ion-label>
+    </ion-item>
+  </ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <img class="icone-app" src="/assets/logo_usinaplay.png">
+
+      <ion-buttons (click)="navigateTo('Notificações')" slot="end" class="button-badge btn-notificacao">
+        <img class="icon-notification" src="/assets/icon_notificacao.png">
+        <ion-badge [ngClass]="{'sem-notificacoes': false}" class="badge"></ion-badge>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content scrollY="true" class="container-pai">
+    <ion-row class="container-infos">
+      <ion-col size="4" class="container-image-user">
+        <img src="{{dados.usuario[0].imagem}}" class="imagem-usuario" alt="">
+      </ion-col>
+      <ion-col size="8">
+        <h4 class="nome-usuario">
+          {{dados.usuario[0].nome}}
+        </h4>
+        <span class="nivel">{{dados.usuario[0].nivel}}</span>
+      </ion-col>
+
+      <div class="d-flex justify-content-center container-performance">
+        <div class="performance">
+          <img class="img-geral" src="/assets/icon_corpo.png">
+          <h6 class="description">MEU CORPO</h6>
+        </div>
+        <div class="performance">
+          <img class="img-geral" src="/assets/icon_trofeu.png">
+          <h6 class="description">OBJETIVOS E CONQUISTAS</h6>
+        </div>
+      </div>
+    </ion-row>
+
+    <app-sessao-cards [dados]="dados"></app-sessao-cards>
+
+  </ion-content>
+
+</div>
